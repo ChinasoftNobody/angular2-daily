@@ -7,8 +7,9 @@ import {AppComponent}   from './daily/component/components/app.component';
 import {FormsModule}   from '@angular/forms';
 import {AppRouterModule} from "./app.router";
 import {MainComponent} from "./daily/component/components/main.component";
+import {HttpModule} from "@angular/http";
 @NgModule({
-    imports: [BrowserModule, FormsModule,AppRouterModule],
+    imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule],
     declarations: [AppComponent,MainComponent],
     bootstrap: [AppComponent]
 })
