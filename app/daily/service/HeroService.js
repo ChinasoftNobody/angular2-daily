@@ -10,21 +10,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by china on 2017/2/12.
  */
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var forms_1 = require("@angular/forms");
-var app_router_1 = require("./app.router");
-var AppModule = (function () {
-    function AppModule() {
+var myConst_1 = require("../component/const/myConst");
+var HeroService = (function () {
+    function HeroService() {
     }
-    return AppModule;
+    HeroService.prototype.getHeroes = function () {
+        return Promise.resolve(myConst_1.MyConst.HEROES || []);
+    };
+    return HeroService;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_router_1.AppRouterModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+HeroService = __decorate([
+    core_1.Injectable()
+], HeroService);
+exports.HeroService = HeroService;
+//# sourceMappingURL=HeroService.js.map

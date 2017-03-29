@@ -5,21 +5,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Created by china on 2017/2/12.
+ * Created by Administrator on 2017/3/29.
  */
 var core_1 = require("@angular/core");
-var myConst_1 = require("../component/const/myConst");
-var HeroService = (function () {
-    function HeroService() {
+var router_1 = require("@angular/router");
+var routes = [
+    { path: '', redirectTo: '/index', pathMatch: 'full' }
+];
+var AppRouterModule = (function () {
+    function AppRouterModule() {
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(myConst_1.MyConst.HEROES || []);
-    };
-    return HeroService;
+    return AppRouterModule;
 }());
-HeroService = __decorate([
-    core_1.Injectable()
-], HeroService);
-exports.HeroService = HeroService;
-//# sourceMappingURL=HeroService.js.map
+AppRouterModule = __decorate([
+    core_1.NgModule({
+        imports: [router_1.RouterModule.forRoot(routes)],
+        exports: [router_1.RouterModule]
+    })
+], AppRouterModule);
+exports.AppRouterModule = AppRouterModule;
+//# sourceMappingURL=router.module.js.map
