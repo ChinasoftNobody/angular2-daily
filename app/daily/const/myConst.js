@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Created by china on 2017/2/12.
+ */
 var heros = [
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },

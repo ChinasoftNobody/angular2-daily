@@ -1,7 +1,7 @@
+import {Hero} from "../bean/hero";
 /**
  * Created by china on 2017/2/12.
  */
-import {Hero} from "../bean/hero";
 const heros: Hero[] = [
     {id: 11, name: 'Mr. Nice'},
     {id: 12, name: 'Narco'},

@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by china on 2017/2/12.
  */
 var core_1 = require("@angular/core");
-var myConst_1 = require("../component/const/myConst");
+var myConst_1 = require("../const/myConst");
 var HeroService = (function () {
     function HeroService() {
     }

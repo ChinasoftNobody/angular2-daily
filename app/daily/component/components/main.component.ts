@@ -1,17 +1,17 @@
+import {Component, OnInit} from "@angular/core";
+import {HeroService} from "../../service/HeroService";
+import {Hero} from "../../bean/hero";
 /**
- * Created by china on 2017/2/12.
+ * Created by Administrator on 2017/3/29.
  */
-import {Component, OnInit} from '@angular/core';
-import {Hero} from './daily/component/bean/hero';
-import {HeroService} from './daily/service/HeroService';
-
 @Component({
-    selector: 'my-app',
-    templateUrl: 'daily/views/main.html',
-    styleUrls: ['daily/css/main.css'],
+    moduleId:module.id,
+    selector: 'app-main',
+    templateUrl: '../views/main.html',
+    styleUrls:['../styles/main.css'],
     providers: [HeroService]
 })
-export class AppComponent implements OnInit {
+export class MainComponent implements OnInit{
     ngOnInit(): void {
         this.getHeroes();
     }
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     constructor(private heroService: HeroService) {
     };
 
-    title = 'Tour of Heroes';
+    name = 'local message';
     selectedHero: Hero;
     heroes: Hero[];
 

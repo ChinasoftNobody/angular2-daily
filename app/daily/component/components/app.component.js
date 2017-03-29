@@ -7,23 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Created by Administrator on 2017/3/29.
+ * Created by china on 2017/2/12.
  */
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var routes = [
-    { path: '', redirectTo: '/index', pathMatch: 'full' }
-];
-var AppRouterModule = (function () {
-    function AppRouterModule() {
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'Tour of Heroes';
     }
-    return AppRouterModule;
+    return AppComponent;
 }());
-AppRouterModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
+AppComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'my-app',
+        templateUrl: '../views/app.html',
     })
-], AppRouterModule);
-exports.AppRouterModule = AppRouterModule;
-//# sourceMappingURL=router.module.js.map
+], AppComponent);
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map
