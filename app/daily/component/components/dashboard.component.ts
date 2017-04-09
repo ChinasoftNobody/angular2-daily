@@ -9,8 +9,8 @@ import {stringify} from "querystring";
 @Component({
     moduleId: module.id,
     selector: 'app-main',
-    templateUrl: '../views/main.html',
-    styleUrls: ['../styles/main.css'],
+    templateUrl: '../views/dashboard.html',
+    styleUrls: ['../styles/dashboard.css'],
     providers: [HeroService, TestService]
 })
 export class MainComponent implements OnInit {

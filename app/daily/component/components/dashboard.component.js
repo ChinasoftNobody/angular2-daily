@@ -39,12 +39,12 @@ MainComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'app-main',
-        templateUrl: '../views/main.html',
-        styleUrls: ['../styles/main.css'],
+        templateUrl: '../views/dashboard.html',
+        styleUrls: ['../styles/dashboard.css'],
         providers: [HeroService_1.HeroService, TestService_1.TestService]
     }),
     __metadata("design:paramtypes", [HeroService_1.HeroService,
         TestService_1.TestService])
 ], MainComponent);
 exports.MainComponent = MainComponent;
-//# sourceMappingURL=main.component.js.map
+//# sourceMappingURL=dashboard.component.js.map

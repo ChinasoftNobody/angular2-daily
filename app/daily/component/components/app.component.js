@@ -13,7 +13,7 @@ var core_1 = require("@angular/core");
 var RemoteService_1 = require("../../service/RemoteService");
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Tour of Heroes';
+        this.title = 'Habit Builder';
     }
     return AppComponent;
 }());

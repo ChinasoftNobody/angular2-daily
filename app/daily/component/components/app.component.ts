@@ -10,5 +10,5 @@ import {RemoteService} from "../../service/RemoteService";
     providers:[RemoteService]
 })
 export class AppComponent{
-    title = 'Tour of Heroes';
+    title = 'Habit Builder';
 }
