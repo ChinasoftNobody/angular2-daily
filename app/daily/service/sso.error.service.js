@@ -11,15 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var cookies_service_1 = require("angular2-cookie/services/cookies.service");
-/**
- * Created by Administrator on 2017/5/7.
- */
 var SSOErrorService = (function () {
     function SSOErrorService(cookie) {
         this.cookie = cookie;
     }
     SSOErrorService.prototype.resolveRemoteResult = function (data, next) {
-        debugger;
         if (data.status == 'ok') {
             next(data.result);
             return;

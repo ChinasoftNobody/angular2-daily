@@ -11,7 +11,8 @@ import {HttpModule} from "@angular/http";
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 @NgModule({
     imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule],
-    declarations: [AppComponent,MainComponent,CookieService],
+    declarations: [AppComponent,MainComponent],
+    providers: [CookieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
