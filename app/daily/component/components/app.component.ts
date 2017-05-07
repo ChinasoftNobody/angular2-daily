@@ -3,11 +3,12 @@
  */
 import {Component} from '@angular/core';
 import {RemoteService} from "../../service/RemoteService";
+import {SSOErrorService} from "../../service/sso.error.service";
 @Component({
     moduleId:module.id,
     selector: 'my-app',
     templateUrl: '../views/app.html',
-    providers:[RemoteService]
+    providers:[RemoteService,SSOErrorService]
 })
 export class AppComponent{
     title = 'Habit Builder';

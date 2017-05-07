@@ -8,9 +8,10 @@ import {FormsModule}   from '@angular/forms';
 import {AppRouterModule} from "./app.router";
 import {MainComponent} from "./daily/component/components/dashboard.component";
 import {HttpModule} from "@angular/http";
+import {CookieService} from 'angular2-cookie/services/cookies.service';
 @NgModule({
     imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule],
-    declarations: [AppComponent,MainComponent],
+    declarations: [AppComponent,MainComponent,CookieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

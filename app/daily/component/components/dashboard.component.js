@@ -12,13 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var HeroService_1 = require("../../service/HeroService");
 var TestService_1 = require("../../service/TestService");
+var sso_error_service_1 = require("../../service/sso.error.service");
 /**
  * Created by Administrator on 2017/3/29.
  */
 var MainComponent = (function () {
-    function MainComponent(heroService, testService) {
+    function MainComponent(heroService, testService, ssoErrorService) {
         this.heroService = heroService;
         this.testService = testService;
+        this.ssoErrorService = ssoErrorService;
         this.name = 'local message';
     }
     MainComponent.prototype.ngOnInit = function () {
@@ -30,8 +32,7 @@ var MainComponent = (function () {
     };
     MainComponent.prototype.getHeroes = function () {
         var _this = this;
-        // this.heroService.getHeroes().then(heroes => this.heroes = heroes);
-        this.testService.getMessage().subscribe(function (data) { return _this.name = data.json().result; });
+        this.testService.getMessage().subscribe(function (data) { return _this.ssoErrorService.resolveRemoteResult(data.json(), function (result) { return _this.name = result; }); });
     };
     return MainComponent;
 }());
@@ -44,7 +45,8 @@ MainComponent = __decorate([
         providers: [HeroService_1.HeroService, TestService_1.TestService]
     }),
     __metadata("design:paramtypes", [HeroService_1.HeroService,
-        TestService_1.TestService])
+        TestService_1.TestService,
+        sso_error_service_1.SSOErrorService])
 ], MainComponent);
 exports.MainComponent = MainComponent;
 //# sourceMappingURL=dashboard.component.js.map

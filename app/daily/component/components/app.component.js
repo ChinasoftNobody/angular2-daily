@@ -11,6 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var RemoteService_1 = require("../../service/RemoteService");
+var sso_error_service_1 = require("../../service/sso.error.service");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Habit Builder';
@@ -22,7 +23,7 @@ AppComponent = __decorate([
         moduleId: module.id,
         selector: 'my-app',
         templateUrl: '../views/app.html',
-        providers: [RemoteService_1.RemoteService]
+        providers: [RemoteService_1.RemoteService, sso_error_service_1.SSOErrorService]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

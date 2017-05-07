@@ -3,6 +3,7 @@ import {HeroService} from "../../service/HeroService";
 import {Hero} from "../../bean/hero";
 import {TestService} from "../../service/TestService";
 import {stringify} from "querystring";
+import {SSOErrorService} from "../../service/sso.error.service";
 /**
  * Created by Administrator on 2017/3/29.
  */
@@ -19,7 +20,8 @@ export class MainComponent implements OnInit {
     }
 
     constructor(private heroService: HeroService,
-                private testService: TestService) {
+                private testService: TestService,
+                private ssoErrorService:SSOErrorService) {
     };
 
     name = 'local message';
@@ -31,7 +33,6 @@ export class MainComponent implements OnInit {
     }
 
     getHeroes(): void {
-        // this.heroService.getHeroes().then(heroes => this.heroes = heroes);
-        this.testService.getMessage().subscribe(data => this.name = data.json().result)
+        this.testService.getMessage().subscribe(data => this.ssoErrorService.resolveRemoteResult(data.json(),result =>this.name = result) )
     }
 }
