@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="fav.ico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
     <link rel="icon" href="fav_x.ico" type="image/x-icon">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -21,6 +24,10 @@
 <!-- 3. Display the application -->
 <body>
 <base href="/">
+<sso-header></sso-header>
+<div class="app">
 <my-app>Loading...</my-app>
+</div>
+<sso-footer></sso-footer>
 </body>
 </html>

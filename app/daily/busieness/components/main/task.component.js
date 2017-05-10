@@ -6,25 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Created by china on 2017/2/12.
- */
 var core_1 = require("@angular/core");
-var RemoteService_1 = require("../../service/RemoteService");
-var sso_error_service_1 = require("../../service/sso.error.service");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Habit Builder';
+/**
+ * Created by Administrator on 2017/5/10.
+ */
+var TaskComponent = (function () {
+    function TaskComponent() {
     }
-    return AppComponent;
+    return TaskComponent;
 }());
-AppComponent = __decorate([
+TaskComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
-        templateUrl: '../views/app.html',
-        providers: [RemoteService_1.RemoteService, sso_error_service_1.SSOErrorService]
+        selector: 'app-task',
+        templateUrl: '../../views/main/task.html',
+        styleUrls: ['../../styles/main/task.css'],
+        providers: []
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], TaskComponent);
+exports.TaskComponent = TaskComponent;
+//# sourceMappingURL=task.component.js.map

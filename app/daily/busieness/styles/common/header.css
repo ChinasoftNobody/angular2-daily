@@ -1,0 +1,7 @@
+.header{height: 6%;background-color: #27ae60;text-align: right;padding-right: 5%; }
+.header nav{background-color: #27ae60;border: none;margin: 0;}
+.header a{color: #FFFFFF;}
+.header a:hover{color: #EEEEEE;}
+.open>a,.open>a:hover{background-color: transparent;}
+.header .dropdown-menu{  background-color: #FFFFFF;}
+.header .dropdown-menu a{color: black;}

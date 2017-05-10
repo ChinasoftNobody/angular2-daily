@@ -11,10 +11,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./daily/component/components/dashboard.component");
+var dashboard_component_1 = require("./daily/busieness/components/dashboard.component");
+var task_component_1 = require("./daily/busieness/components/main/task.component");
+var zone_component_1 = require("./daily/busieness/components/main/zone.component");
+var setting_component_1 = require("./daily/busieness/components/main/setting.component");
 var routes = [
     { path: '', redirectTo: "/dashboard", pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.MainComponent }
+    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'task', component: task_component_1.TaskComponent },
+    { path: 'zone', component: zone_component_1.ZoneComponent },
+    { path: 'setting', component: setting_component_1.SettingComponent },
+    { path: 'logout', component: dashboard_component_1.DashboardComponent },
 ];
 var AppRouterModule = (function () {
     function AppRouterModule() {

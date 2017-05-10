@@ -8,8 +8,9 @@ import {SSOErrorService} from "../../service/sso.error.service";
     moduleId:module.id,
     selector: 'my-app',
     templateUrl: '../views/app.html',
+    styleUrls:['../styles/app.css'],
     providers:[RemoteService,SSOErrorService]
 })
 export class AppComponent{
-    title = 'Habit Builder';
+
 }

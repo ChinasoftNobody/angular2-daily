@@ -11,12 +11,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./daily/component/components/app.component");
+var app_component_1 = require("./daily/busieness/components/app.component");
 var forms_1 = require("@angular/forms");
 var app_router_1 = require("./app.router");
-var dashboard_component_1 = require("./daily/component/components/dashboard.component");
 var http_1 = require("@angular/http");
 var cookies_service_1 = require("angular2-cookie/services/cookies.service");
+var dashboard_component_1 = require("./daily/busieness/components/dashboard.component");
+var header_component_1 = require("./daily/busieness/components/common/header.component");
+var footer_component_1 = require("./daily/busieness/components/common/footer.component");
+var task_component_1 = require("./daily/busieness/components/main/task.component");
+var setting_component_1 = require("./daily/busieness/components/main/setting.component");
+var zone_component_1 = require("./daily/busieness/components/main/zone.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,9 +30,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_router_1.AppRouterModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, dashboard_component_1.MainComponent],
+        declarations: [app_component_1.AppComponent, dashboard_component_1.DashboardComponent, header_component_1.HeaderComponent, footer_component_1.FooterComponent, task_component_1.TaskComponent, setting_component_1.SettingComponent, zone_component_1.ZoneComponent],
         providers: [cookies_service_1.CookieService],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent, header_component_1.HeaderComponent, footer_component_1.FooterComponent]
     })
 ], AppModule);
 exports.AppModule = AppModule;
