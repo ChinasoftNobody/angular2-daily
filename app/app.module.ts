@@ -14,8 +14,10 @@ import {FooterComponent} from "./daily/busieness/components/common/footer.compon
 import {TaskComponent} from "./daily/busieness/components/main/task.component";
 import {SettingComponent} from "./daily/busieness/components/main/setting.component";
 import {ZoneComponent} from "./daily/busieness/components/main/zone.component";
+import {EchartsNg2Module} from "./daily/common/echarts-ng2.module";
+
 @NgModule({
-    imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule],
+    imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule,EchartsNg2Module],
     declarations: [AppComponent,DashboardComponent,HeaderComponent,FooterComponent,TaskComponent,SettingComponent,ZoneComponent],
     providers: [CookieService],
     bootstrap: [AppComponent,HeaderComponent,FooterComponent]

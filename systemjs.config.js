@@ -24,7 +24,10 @@
             // other libraries
             'rxjs': 'npm:rxjs',
             'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-            'angular2-cookie': 'npm:angular2-cookie'
+            'angular2-cookie': 'npm:angular2-cookie',
+            'echarts-ng2':'npm:echarts-ng2',
+            'echarts':'npm:echarts',
+            'zrender':'npm:zrender'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -42,6 +45,14 @@
             'angular2-cookie': {
                 main: './core.js',
                 defaultExtension: 'js'
+            },
+            'echarts':{
+                main:'./index.js',
+                defaultExtension:'js'
+            },
+            'zrender':{
+                main:'./lib/zrender.js',
+                defaultExtension:'js'
             }
         }
     });
