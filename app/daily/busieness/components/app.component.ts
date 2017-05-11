@@ -12,5 +12,4 @@ import {SSOErrorService} from "../../service/sso.error.service";
     providers:[RemoteService,SSOErrorService]
 })
 export class AppComponent{
-
 }

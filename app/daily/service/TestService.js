@@ -10,23 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var RemoteService_1 = require("./RemoteService");
 /**
  * Created by Administrator on 2017/3/29.
  */
 var TestService = (function () {
-    function TestService(remote) {
-        this.remote = remote;
+    function TestService() {
     }
     TestService.prototype.getMessage = function () {
         // return this.remote.get("http://localhost:8080/daily/test/test1",{});
-        return this.remote.post("http://localhost:8080/daily/test/test2", { name: "liguanghao" }, {});
+        // return this.remote.post("http://localhost:8080/daily/test/test2",{name:"liguanghao"},{},data =>console.log(data));
     };
     return TestService;
 }());
 TestService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [RemoteService_1.RemoteService])
+    __metadata("design:paramtypes", [])
 ], TestService);
 exports.TestService = TestService;
 //# sourceMappingURL=TestService.js.map
