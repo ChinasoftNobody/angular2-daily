@@ -42,4 +42,4 @@ RemoteService = RemoteService_1 = __decorate([
 ], RemoteService);
 exports.RemoteService = RemoteService;
 var RemoteService_1;
-//# sourceMappingURL=RemoteService.js.map
+//# sourceMappingURL=remote.service.js.map

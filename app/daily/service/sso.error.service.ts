@@ -10,7 +10,7 @@ export class SSOErrorService{
         }
         if(data.result.hasOwnProperty("access") && !data.result.access){
             this.cookie.put("sso_redirect_url",location.href);
-            location.href = 'http://192.168.1.3:8080/';
+            location.href = 'http://192.168.1.9:8080/';
         }
     }
 }

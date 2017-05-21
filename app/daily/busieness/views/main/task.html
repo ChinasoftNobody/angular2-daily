@@ -1,1 +1,33 @@
-<echarts-ng2 [option]="option" [style]="{width: '49%', height: '100%',float:'left'}"></echarts-ng2>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="height: 80px;">
+        <h3 class="text-left">My Task</h3>
+    </div>
+    <div class="panel-body pre-scrollable">
+        <table class="table table-hover" >
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>startTime</th>
+                <th>endTime</th>
+                <th>eventType</th>
+                <th>notes</th>
+                <th>createTime</th>
+                <th>operatingTime</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let event of events">
+                <td>{{event.eventName}}</td>
+                <td>{{event.startTime}}</td>
+                <td>{{event.endTime}}</td>
+                <td>{{event.eventType}}</td>
+                <td>{{event.notes}}</td>
+                <td>{{event.createTime}}</td>
+                <td>{{event.operatingTime}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <daily-pagination></daily-pagination>
+</div>

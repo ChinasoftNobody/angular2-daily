@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by china on 2017/2/12.
  */
 var core_1 = require("@angular/core");
-var RemoteService_1 = require("../../service/RemoteService");
+var remote_service_1 = require("../../service/remote.service");
 var sso_error_service_1 = require("../../service/sso.error.service");
 var AppComponent = (function () {
     function AppComponent() {
@@ -23,7 +23,7 @@ AppComponent = __decorate([
         selector: 'my-app',
         templateUrl: '../views/app.html',
         styleUrls: ['../styles/app.css'],
-        providers: [RemoteService_1.RemoteService, sso_error_service_1.SSOErrorService]
+        providers: [remote_service_1.RemoteService, sso_error_service_1.SSOErrorService]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

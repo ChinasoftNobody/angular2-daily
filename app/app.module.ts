@@ -15,11 +15,14 @@ import {TaskComponent} from "./daily/busieness/components/main/task.component";
 import {SettingComponent} from "./daily/busieness/components/main/setting.component";
 import {ZoneComponent} from "./daily/busieness/components/main/zone.component";
 import {EchartsNg2Module} from "./daily/common/echarts-ng2.module";
+import {NgLayer} from "./daily/common/Dialog";
+import {RemoteService} from "./daily/service/remote.service";
+import {PaginationComponent} from "./daily/busieness/components/common/pagination.component";
 
 @NgModule({
     imports: [BrowserModule, FormsModule,AppRouterModule,HttpModule,EchartsNg2Module],
-    declarations: [AppComponent,DashboardComponent,HeaderComponent,FooterComponent,TaskComponent,SettingComponent,ZoneComponent],
-    providers: [CookieService],
+    declarations: [AppComponent,DashboardComponent,HeaderComponent,FooterComponent,TaskComponent,SettingComponent,ZoneComponent,PaginationComponent],
+    providers: [CookieService,NgLayer,RemoteService],
     bootstrap: [AppComponent,HeaderComponent,FooterComponent]
 })
 export class AppModule {
