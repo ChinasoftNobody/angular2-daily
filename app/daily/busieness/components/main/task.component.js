@@ -22,11 +22,18 @@ var TaskComponent = (function () {
         this.layer = layer;
         this.view = view;
         this.eventService = eventService;
-        this.events = [{ eventName: 'ss' }];
     }
     TaskComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.remote.post("http://localhost:8080/daily/schedule/query", { userName: 'string' }, {}, function (data) { return _this.events = data; });
+        this.remote.post("http://localhost:8080/daily/schedule/query", { userName: 'string', pageSize: 10, pageNumber: 0 }, {}, function (data) { return _this.events = data; });
+    };
+    /**
+     * 选择页数事件
+     * @param pageable 分页信息
+     */
+    TaskComponent.prototype.taskPageSelect = function (pageable) {
+        var _this = this;
+        this.remote.post("http://localhost:8080/daily/schedule/query", { userName: 'string', pageSize: pageable.pageSize, pageNumber: pageable.pageNumber }, {}, function (data) { return _this.events = data; });
     };
     return TaskComponent;
 }());

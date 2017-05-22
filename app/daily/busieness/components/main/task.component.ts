@@ -17,10 +17,17 @@ export class TaskComponent implements OnInit{
     constructor(private remote:RemoteService,private layer:NgLayer,
                 private view:ViewContainerRef,private eventService:EventService){}
 
-    events:any = [{eventName:'ss'}];
+    events:any;
     ngOnInit(): void {
-        this.remote.post("http://localhost:8080/daily/schedule/query",{userName:'string'},{},data=>this.events = data)
+        this.remote.post("http://localhost:8080/daily/schedule/query",{userName:'string',pageSize:10,pageNumber:0},{},data=>this.events = data)
     }
 
+    /**
+     * 选择页数事件
+     * @param pageable 分页信息
+     */
+    taskPageSelect(pageable:any){
+        this.remote.post("http://localhost:8080/daily/schedule/query",{userName:'string',pageSize:pageable.pageSize,pageNumber:pageable.pageNumber},{},data=>this.events = data)
+    }
 
 }

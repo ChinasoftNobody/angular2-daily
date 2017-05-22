@@ -1,9 +1,9 @@
 <div class="panel panel-default">
     <!-- Default panel contents -->
-    <div class="panel-heading" style="height: 80px;">
+    <div class="panel-heading">
         <h3 class="text-left">My Task</h3>
     </div>
-    <div class="panel-body pre-scrollable">
+    <div class="panel-body">
         <table class="table table-hover" >
             <thead>
             <tr>
@@ -16,8 +16,8 @@
                 <th>operatingTime</th>
             </tr>
             </thead>
-            <tbody>
-            <tr *ngFor="let event of events">
+            <tbody *ngIf="events && events.content">
+            <tr *ngFor="let event of events.content">
                 <td>{{event.eventName}}</td>
                 <td>{{event.startTime}}</td>
                 <td>{{event.endTime}}</td>
@@ -29,5 +29,5 @@
             </tbody>
         </table>
     </div>
-    <daily-pagination></daily-pagination>
 </div>
+<daily-pagination [pageInfo]="events" (pageSelect)="taskPageSelect($event)" ></daily-pagination>
